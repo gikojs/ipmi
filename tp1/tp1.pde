@@ -1,4 +1,4 @@
-// alumno: Valentina Chavez, materia:ipmi, comision: 3
+// alumno: Valentina Chavez, materia:ipmi, comision: 3, fecha: 18/04/2026
 
 PImage img;
 
@@ -15,21 +15,21 @@ void draw(){
   //elipse1 (atras del edificio3)
     noStroke();
     fill(57, 227, 132);
-    ellipse(490, 350, 90, 100);
-    
-  //ellipse2 (a la mitad)
-    noStroke();
-    fill(247, 175, 238);
-    //ellipse(715, 350, 100, 100);
+    ellipse(490, 350, 120, 140);
+    fill(255, 213, 121);
+    ellipse(528, 362, 50, 50);
     
   //triangulo
-    stroke(247, 175, 238);
+    noStroke();
     strokeWeight(10);
     fill(175, 115, 205);
-    triangle(650, 240, 840, 283, 790, 150);
+    triangle(650, 240, 840, 283, 787, 150);
     noStroke();
     fill(247, 175, 238);
-    triangle(792, 144, 675, 147, 718, 194);
+    triangle(787, 152, 675, 147, 728, 193);
+    stroke(247, 175, 238);
+    strokeWeight(3);
+    line(785, 154, 800, 178);
    
    //edificio 3 parte de atras del elipse)
     noStroke();
@@ -45,7 +45,10 @@ void draw(){
       quad( 686, 324, 800, 371, 800, 400, 689, 400);
       //pieza azul
       fill(85, 150, 216);
-      quad(656, 320, 687, 241, 781, 266, 766, 353);
+      quad(656, 320, 687, 241, 774, 268, 756, 352);
+      noStroke();
+      fill(84, 100, 160);
+      quad(758, 353, 726, 400, 656, 400, 663, 322);
       
   //elipse base
   noStroke();
@@ -66,6 +69,14 @@ void draw(){
       noStroke();
       fill(85, 150, 216);
       quad(450, 223, 570, 276, 570, 318, 407, 253);
+      
+  //ellipse2 (a la mitad)
+    noStroke();
+    fill(247, 175, 238);
+    ellipse(715, 350, 100, 100);
+    
+    //formas amarillas(arriba del elipse)
+      fill();
       
   //edificio2
   noStroke();
