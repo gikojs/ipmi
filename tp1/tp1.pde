@@ -53,7 +53,7 @@ void draw(){
   //elipse base
   noStroke();
   fill(48, 46, 57);
-  ellipse(600, height/2, 260, 250);  
+  ellipse(600, 240, 310, 290);  
 
   //edificio3 (atravesando el elipse)
     //fondo
@@ -70,14 +70,6 @@ void draw(){
       fill(85, 150, 216);
       quad(450, 223, 570, 276, 570, 318, 407, 253);
       
-  //ellipse2 (a la mitad)
-    noStroke();
-    fill(247, 175, 238);
-    ellipse(715, 350, 100, 100);
-    
-    //formas amarillas(arriba del elipse)
-      fill();
-      
   //edificio2
   noStroke();
   fill(247, 175, 238);
@@ -89,6 +81,20 @@ void draw(){
   rect(570, 140, 60, 300);
   fill(57, 227, 132);
   quad(630, 140, 670, 165, 670, 400, 630, 400);
+  
+      
+  //ellipse2 (a la mitad)
+    strokeWeight(2);
+    stroke(0, 0, 0);
+    fill(247, 175, 238);
+    ellipse(720, 410, 120, 120);
+    
+    //formas amarillas(arriba del elipse)
+      noStroke();
+      fill(255, 213, 121);
+      triangle(679, 379, 679, 348, 693, 358);
+      triangle(687, 360, 700, 334, 711, 349);
+      triangle(703, 344, 718, 317, 729, 352);
 }
 
 void mousePressed() {
