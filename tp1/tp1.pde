@@ -1,4 +1,4 @@
-// alumno: Valentina Chavez, materia:ipmi, comision: 3, fecha: 18/04/2026
+// alumno: Valentina Chavez, materia:ipmi, comision: 3, fecha: 18/04/2026, legajo: 125551/8
 
 PImage img;
 
