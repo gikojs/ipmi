@@ -11,13 +11,6 @@ void draw(){
   background(97, 84, 188);
   image(img, 0, 0, width/2, 400);
   line(400, 400, 400, 0);
-
-  //elipse1 (atras del edificio3)
-    noStroke();
-    fill(57, 227, 132);
-    ellipse(490, 350, 120, 140);
-    fill(255, 213, 121);
-    ellipse(528, 362, 50, 50);
     
   //triangulo
     noStroke();
@@ -53,7 +46,14 @@ void draw(){
   //elipse base
   noStroke();
   fill(48, 46, 57);
-  ellipse(600, 240, 310, 290);  
+  ellipse(600, 240, 310, 290);
+  
+  //elipse1 (atras del edificio3)
+    noStroke();
+    fill(57, 227, 132);
+    ellipse(490, 350, 120, 140);
+    fill(255, 213, 121);
+    ellipse(528, 362, 50, 50);
 
   //edificio3 (atravesando el elipse)
     //fondo
@@ -84,17 +84,43 @@ void draw(){
   
       
   //ellipse2 (a la mitad)
-    strokeWeight(2);
-    stroke(0, 0, 0);
     fill(247, 175, 238);
     ellipse(720, 410, 120, 120);
     
     //formas amarillas(arriba del elipse)
       noStroke();
       fill(255, 213, 121);
+      //arribs
       triangle(679, 379, 679, 348, 693, 358);
       triangle(687, 360, 700, 334, 711, 349);
       triangle(703, 344, 718, 317, 729, 352);
+      triangle(726, 355, 738, 333, 758, 368);
+      //abajo
+      beginShape();
+      vertex(678, 364);
+      vertex(681, 375);
+      vertex(691, 378);
+      vertex(701, 381);
+      vertex(713, 381);
+      vertex(719, 380);
+      vertex(725, 380);
+      vertex(734, 378);
+      vertex(743, 374);
+      vertex(751, 370);
+      vertex(756, 367);
+      
+      //arriba
+      vertex(748, 359);
+      vertex(740, 354);
+      vertex(733, 352);
+      vertex(724, 345);
+      vertex(714, 341);
+      vertex(706, 345);
+      vertex(697, 349);
+      vertex(692, 355);
+      vertex(685, 362);
+      vertex(682, 367);
+      endShape();
 }
 
 void mousePressed() {
