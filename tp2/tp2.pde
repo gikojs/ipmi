@@ -1,63 +1,55 @@
-//variables pantallas
-color fondo = color (0, 0, 0);
-color pantalla1 = color(0, 0, 0);
-color pantalla2 = color(73, 109, 49);
-color pantalla3 = color(16, 109, 227);
-color pantalla4 = color(0,0,0);
-color pantalla5 = color(0,0,0);
+// alumno: Valentina Chavez, materia:ipmi, comision: 3, fecha: 18/04/2026, legajo: 125551/8
 
 void setup() {
   size (640, 480);
-  background(fondo);
+  //inicio
+  mitad1 = loadImage("data/mitad1.png");
+  mitad2 = loadImage("data/mitad2.png");
+  posXm1 = (0);
+  posXm2 = (0);
+  posYlogo = (-200);
+  colorbtn = color(100); 
+  pantallabtn = true;
+  //primeras imagenes
+  aespalogo = loadImage("data/logoaespa.png");
 }
 
 void draw() { 
-  //separa las pantallas
-  if (fondo == pantalla1) {
-    background (pantalla1);
-  } else if (fondo == pantalla2) {
-    background (pantalla2);
-  } else if (fondo == pantalla3) {
-    background (pantalla3);
+  background(228, 239, 235);
+  image(mitad1, posXm1, 0, 640, 400);
+  image(mitad2, posXm2, 0, 620, 400);
+  //separacion de la imagen grupal
+  if (pantallabtn == true) {
+    //boton forma
+    fill(colorbtn);
+    rect(233, 392, 150, 50);
   }
-  /*boton
-   rect(10, 430, 100, 50);
-   rect(540, 430, 100, 50); */
+  
+  if (boton && posXm1 < 900 && posXm2 > -500){
+      posXm1++;
+      posXm2--;
+      //logo
+      if (posXm1 > 100 || posXm2 < -100) {
+        image(aespalogo, 160, posYlogo);
+        if (posYlogo < 37) {
+          posYlogo++;
+        }
+      }
+  }
 }
 
-/*void mousePressed() {
-  //boton presionado
- 
- if (mouseButton == LEFT ) {
-   fill(170, 41, 41);
-   background(pantalla1);
- }else {
-   fill (255, 255, 255);
- }
-}*/
-
-//btn laterales
-void keyPressed() {
-  //botones, navegacion
-  if (keyCode == RIGHT) {
-    if (fondo == pantalla1) {
-      fondo = pantalla2;
-    } else if (fondo == pantalla2) {
-      fondo = pantalla3;
-    } else if (fondo == pantalla3) {
-      fondo = pantalla1;
-    }
-  } else if (keyCode == LEFT) {
-    if (fondo == pantalla2) {
-      fondo = pantalla1;
-    } else if (fondo == pantalla3) {
-      fondo = pantalla2;
-    }
+void mouseClicked() {
+    //funcion boton de inicio
+    btn();
+    if (btnarea) {
+    boton = true;
+    colorbtn = color(149, 62, 237);
+    pantallabtn = false;
+    
+  } else {
+    boton = false;
+    colorbtn = color(100);
   }
-/*  if (keyCode == RIGHT) {
-    background(pantalla2);
-  } else if (keyCode == LEFT) {
-    background(pantalla3);
-  } else {   
-  } */
-} 
+  
+    println(mouseX, mouseY);
+}
