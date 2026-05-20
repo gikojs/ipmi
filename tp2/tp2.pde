@@ -7,11 +7,17 @@ void setup() {
   mitad2 = loadImage("data/mitad2.png");
   posXm1 = (0);
   posXm2 = (0);
-  posYlogo = (-200);
-  colorbtn = color(100); 
+  posYlogo = (-200); 
   pantallabtn = true;
+  
+  //textos
+  tinfo = 0;
+  ftitulo = loadFont("AgencyFB-Bold-25.vlw");
+  finfo = loadFont("Calibri-Light-25.vlw");
+  
   //primeras imagenes
   aespalogo = loadImage("data/logoaespa.png");
+  texto1 = "Es el resultado de combinar æ  que significa: Avatar X Experiencia y la palabra inglesa aspect (aspecto), que significa doble cara introduciendo el concepto de metaverso al K-pop, dando a conocer un nuevo mundo virtual.";
 }
 
 void draw() { 
@@ -21,7 +27,7 @@ void draw() {
   //separacion de la imagen grupal
   if (pantallabtn == true) {
     //boton forma
-    fill(colorbtn);
+    fill(222);
     rect(233, 392, 150, 50);
   }
   
@@ -34,6 +40,17 @@ void draw() {
         if (posYlogo < 37) {
           posYlogo++;
         }
+          
+        if (posYlogo >= 37 && tinfo < 500) {
+          fill(0);
+          textFont(finfo);
+          text("es un grupo femenino surcoreano formado por SM Entertainment.", 20, 185, 540, 50);
+          textFont(ftitulo);
+          text("¿Por qué Aespa?", 20, 210);
+          textFont(finfo);
+          text(texto1, 20, 200, 540, 300);
+          tinfo++;  
+        }
       }
   }
 }
@@ -43,12 +60,10 @@ void mouseClicked() {
     btn();
     if (btnarea) {
     boton = true;
-    colorbtn = color(149, 62, 237);
     pantallabtn = false;
     
   } else {
     boton = false;
-    colorbtn = color(100);
   }
   
     println(mouseX, mouseY);
