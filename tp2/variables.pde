@@ -6,6 +6,11 @@ PImage mitad1;
 PImage mitad2;
 PImage aespalogo;
 
+PImage winter;
+PImage karina;
+PImage ning;
+PImage giselle;
+
 //colores
 
 //pos
@@ -13,6 +18,8 @@ int posXm1;
 int posXm2;
 
 int posYlogo;
+
+int posXk;
 
 //btn de inicio
 color btncolor;

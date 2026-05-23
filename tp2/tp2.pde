@@ -10,11 +10,14 @@ void setup() {
   mitad1 = loadImage("data/mitad1.png");
   mitad2 = loadImage("data/mitad2.png");
   aespalogo = loadImage("data/logoaespa.png");
+  
+  karina = loadImage("data/karina.png");
 
   //pos
   posXm1 = 0;
   posXm2 = 0;
   posYlogo = -100;
+  posXk = 640;
 
   //colores
   btncolor = color(222);
@@ -45,6 +48,8 @@ void draw() {
     pantalla1();
   } else if ( estado == 2 ) {
     pantalla2();
+  } else if ( estado == 3 ) {
+    pantalla3();
   }
 }
 
