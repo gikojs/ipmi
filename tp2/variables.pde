@@ -19,7 +19,8 @@ int posXm2;
 
 int posYlogo;
 
-int posXk;
+int posYk;
+int posYg;
 
 //btn de inicio
 color btncolor;

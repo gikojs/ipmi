@@ -12,12 +12,16 @@ void setup() {
   aespalogo = loadImage("data/logoaespa.png");
   
   karina = loadImage("data/karina.png");
-
+  winter = loadImage("data/winter.png");
+  giselle = loadImage("data/giselle.png");
+  ning = loadImage("data/ning.png");
+  
   //pos
   posXm1 = 0;
   posXm2 = 0;
   posYlogo = -100;
-  posXk = 640;
+  posYk = 400;
+  posYg = -400;
 
   //colores
   btncolor = color(222);

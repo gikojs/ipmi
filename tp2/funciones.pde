@@ -46,15 +46,23 @@ void pantalla2() {
   textAlign(LEFT, TOP);
   text( contador, 5, 25 );
 
-  if ( posXk > 0 ) {
-    posXk = posXk - 3;
+  if ( posYk > 0 ) {
+    posYk = posYk - 3;
   } else {
-    posXk = 0;
+    posYk = 0;
   }
-    
-  image(karina, posXk, 100, 640, 200);  
+  if ( posYg > 400 ) {
+    posYg = posYg- 3;
+  } else {
+    posYg = 400;
+  }
+  
+  image(karina, 0, posYk, 155, height);
+  image(winter, 160, posYg, 155, height);
+  image(ning, 320, posYk, 155, height);
+  image(giselle, 480, posYg, 155, height);
 }
 
-void pantalla3 () { 
+void pantalla3 () {
   background(137, 43, 222);
 }
