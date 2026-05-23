@@ -3,25 +3,29 @@ void setup() {
 
   //declaraciones
   //fuentes
-  titulo = loadFont("CopperplateGothic-Bold-25.vlw");
+  titulo = loadFont("CopperplateGothic-Bold-40.vlw");
+  subtitulo = loadFont("CopperplateGothic-Bold-25.vlw");
   info = loadFont("CopperplateGothic-Light-20.vlw");
 
   //imagenes
   mitad1 = loadImage("data/mitad1.png");
   mitad2 = loadImage("data/mitad2.png");
   aespalogo = loadImage("data/logoaespa.png");
-  
+
   karina = loadImage("data/karina.png");
   winter = loadImage("data/winter.png");
   giselle = loadImage("data/giselle.png");
   ning = loadImage("data/ning.png");
-  
+
   //pos
   posXm1 = 0;
   posXm2 = 0;
   posYlogo = -100;
+
   posYk = 400;
   posYg = -400;
+  posXrect = -600;
+  posXi = 0;
 
   //colores
   btncolor = color(222);
@@ -41,7 +45,6 @@ void draw() {
         image(aespalogo, 150, posYlogo);
         if (posYlogo < 100) {
           posYlogo++;
-          //cuando esto se cumple pasa al siguiente estado
         } else {
           estado = 1;
           contador = 0;
@@ -54,6 +57,8 @@ void draw() {
     pantalla2();
   } else if ( estado == 3 ) {
     pantalla3();
+  } else if ( estado == 4 ) {
+    //pantalla4();
   }
 }
 

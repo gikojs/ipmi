@@ -19,8 +19,12 @@ int posXm2;
 
 int posYlogo;
 
+//integrantes
 int posYk;
 int posYg;
+
+int posXrect;
+int posXi;
 
 //btn de inicio
 color btncolor;
@@ -31,11 +35,10 @@ boolean btnarea(float x_, float y_, float ancho_, float alto_) {
     return false;
   }
 }
-//tiempo textos
-int tinfo;
 
 //fuentes
 PFont titulo;
+PFont subtitulo;
 PFont info;
 
 //textos
