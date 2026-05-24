@@ -342,7 +342,7 @@ void pantalla7() {
   //black mamba
 
   contador++;
-  if ( contador > 60*6) {
+  if ( contador > 60*5) {
     contador = 0;
     estado = 8;
     posXrect = 0;
@@ -358,9 +358,9 @@ void pantalla7() {
     textAlign(CENTER, CENTER);
     fill(225);
     textFont(titulo);
-    text("Black Mamba", 350, 380);
+    text("Black Mamba", 330, 380);
     textFont(info);
-    text("debut", 350, 380+40);
+    text("debut", 330, 380+40);
   }
 
   fill(142, 242, 147);
@@ -386,26 +386,36 @@ void pantalla8() {
   if ( contador > 60*6) {
     contador = 0;
     estado = 9;
-    posXrect = 0;
+    posXrect = 640;
     posXi = 0;
-    btncolor = 222;
+    posYk = 400;
+    posYg = -400;
   }
 
   String infobm = "El 2 de noviembre, la agencia del grupo confirmó la fecha del debut para el 17 de noviembre a las 6PM KST con la canción Black Mamba. Además, se reveló un video teaser de las integrantes, el nuevo clip, titulado SYNK, æspa. La letra de la canción crea el mundo de aespa al introducir una historia en la que Black Mamba es el villano que amenaza al mundo y bloquea la conexión entre los miembros de aespa y sus avatares virtuales llamados æ.";
   String photos = "Las fotos teaser se dividieron en dos conceptos: mundo real y kwangya el mundo donde habitan los avatares y el cual es amenazado";
   background( 142, 242, 147 );
+
+  image( grupobm, posXrect, 204, 640, 480);
+
+  if ( contador>=60*4 ) {
+    if ( posXrect < 640 ) {
+      posXrect = posXrect + 5;
+    } else {
+      posXrect = 0;
+    }
+
+    if ( posXi < 640 ) {
+      posXi = posXi + 5;
+    } else {
+      posXi = 0;
+    }
+  }
+
   fill( 0 );
   textFont( info);
-  text( infobm, 10, 20, 640, 460 );
-  text ( photos, 10, 141+20, 640, 460 );
-
-  
-  image( grupobm, posXrect, 224, 640, 480);
-  if (posXrect < 640) {
-    posXrect = posXrect + 4;
-  } else {
-    posXrect = 0;
-  }
+  text( infobm, posXi, 20, 640, 460 );
+  text ( photos, posXi, 141+20, 640, 460 );
 
   fill(225);
   textAlign(LEFT, TOP);
@@ -414,14 +424,14 @@ void pantalla8() {
 }
 
 void pantalla9 () {
+  //integrantes
   contador++;
-  if ( contador >= 60*6) {
+  if ( contador >= 60*4) {
     contador = 0;
     estado = 10;
-    btncolor= 222;
   }
 
-  background(110, 43, 178);
+  background(142, 242, 147 );
 
   if ( posYk > 0 ) {
     posYk = posYk - 3;
@@ -439,15 +449,92 @@ void pantalla9 () {
   image(ningbm, 320, posYk, 155, height);
   image(gisellebm, 480, posYg, 155, height);
 
+  if (posYk == 0 && posYg == 0 ) {
+    fill(142, 242, 147);
+    rect(320-100, 200, 200, 50);
+    textAlign(CENTER, CENTER);
+    textFont(subtitulo);
+    fill(0);
+    text("mundo real", 320, 226);
+  }
+
   textAlign(LEFT, TOP);
   textFont(subtitulo);
   text( contador, 5, 5 );
-  
-    //boton
+}
+
+void pantalla10() {
+
+  contador++;
+  if ( contador > 60*4) {
+    contador = 0;
+    estado = 11;
+    posXrect = 0;
+    posXi = 0;
+    posYk = 400;
+    posYg = -400;
+    btncolor = 222;
+  }
+
+  image (grupokw, posXrect, 0, width, height);
+
+  if ( posXrect > 0 ) {
+    posXrect = posXrect - 5;
+  } else {
+    posXrect = 0;
+  }
+}
+
+void pantalla11() {
+  //integrantes
+  contador++;
+  if ( contador >= 60*15) {
+    contador = 0;
+    posXm1 = 0;
+    posXm2 = 0;
+    posYlogo = -100;
+    posYk = 400;
+    posYg = -400;
+    contador = 0;
+    estado = 12;
+  }
+
+  background( 142, 87, 232 );
+
+  if ( posYk > 0 ) {
+    posYk = posYk - 3;
+  } else {
+    posYk = 0;
+  }
+  if ( posYg < 0 ) {
+    posYg = posYg + 3;
+  } else {
+    posYg = 0;
+  }
+
+  image(winterkw, 0, posYk, 155, height);
+  image(karinakw, 160, posYg, 155, height);
+  image(ningkw, 320, posYk, 155, height);
+  image(gisellekw, 480, posYg, 155, height);
+
+  if (posYk == 0 && posYg == 0 ) {
+    fill(142, 87, 232);
+    rect(320-100, 200, 200, 50);
+    textAlign(CENTER, CENTER);
+    textFont(subtitulo);
+    fill(0);
+    text("kwangya", 320, 226);
+  }
+
+  textAlign(LEFT, TOP);
+  textFont(subtitulo);
+  text( contador, 5, 5 );
+
+  //boton
   fill(btncolor);
-  rect(245, 385, 150, 50);
-  textAlign(CENTER, CENTER);
+  rect(525, 435, 100, 50);
+  textAlign(RIGHT, CENTER);
   fill(0);
   textFont(subtitulo);
-  text("Reset", 320, 410);
+  text("reset", 612, 460);
 }

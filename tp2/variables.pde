@@ -17,6 +17,13 @@ PImage karinabm;
 PImage winterbm;
 PImage gisellebm;
 PImage ningbm;
+
+PImage grupokw;
+PImage karinakw;
+PImage winterkw;
+PImage gisellekw;
+PImage ningkw;
+
 //colores
 
 //pos

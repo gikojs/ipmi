@@ -24,6 +24,12 @@ void setup() {
   gisellebm= loadImage("data/gisellebm.jpg");
   ningbm = loadImage("data/ningbm.jpg");
 
+  grupokw = loadImage("data/kwangya.jpg");
+  karinakw = loadImage("data/karinakw.jpg");
+  winterkw = loadImage("data/winterkw.jpg");
+  gisellekw= loadImage("data/gisellekw.jpg");
+  ningkw = loadImage("data/ningkw.jpg");
+
   //pos
   posXm1 = 0;
   posXm2 = 0;
@@ -80,36 +86,39 @@ void draw() {
     pantalla8();
   } else if ( estado == 9 ) {
     pantalla9();
+  } else if ( estado == 10 ) {
+    pantalla10();
+  } else if ( estado == 11) {
+    pantalla11();
+
     if (btncolor == color(170, 80, 232)) {
-      estado=0;
+      estado = 0;
     }
   }
 }
 
 void mousePressed() {
+
   if ( estado == 0 ) {
     if (btnarea(320, 410, 150, 50)) {
       btncolor = color(170, 80, 232);
-    } else if ( estado == 1) {
     }
-    else if ( estado == 2 ) {
-    }
-    else if ( estado == 3 ) {
-    }
-    else if ( estado == 4 ) {
-    }
-    else if ( estado == 5 ) {
-    }
-    else if ( estado == 6 ) {
-    }
-    else if ( estado == 7 ) {
-    }
-    else if ( estado == 8 ) {
-    }
-    else if ( estado == 9 ) {
-      if (btnarea(320, 410, 150, 50)) {
-        btncolor = color(170, 80, 232);
-      }
+  } else if ( estado == 1 ) {
+  } else if ( estado == 2 ) {
+  } else if ( estado == 3 ) {
+  } else if ( estado == 4 ) {
+  } else if ( estado == 5 ) {
+  } else if ( estado == 6 ) {
+  } else if ( estado == 7 ) {
+  } else if ( estado == 8 ) {
+  } else if ( estado == 9 ) {
+  } else if ( estado == 10 ) {
+  } else if ( estado == 11 ) {
+    if (btnarea(575, 460, 100, 50)) {
+      estado = 0;
+      btncolor = color(222);
+      posXm1 = 0;
+      posXm2 = 0;
     }
   }
 }
