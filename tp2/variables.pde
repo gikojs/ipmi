@@ -11,6 +11,12 @@ PImage karina;
 PImage ning;
 PImage giselle;
 
+PImage blackm;
+PImage grupobm;
+PImage karinabm;
+PImage winterbm;
+PImage gisellebm;
+PImage ningbm;
 //colores
 
 //pos
@@ -25,6 +31,11 @@ int posYg;
 
 int posXrect;
 int posXi;
+
+int posXtransicion;
+
+//tamaño
+int tam;
 
 //btn de inicio
 color btncolor;

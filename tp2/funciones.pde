@@ -10,9 +10,8 @@ void pantallainicio() {
   image(mitad1, posXm1, 0, 640, 400);
   image(mitad2, posXm2, 0, 640, 400);
   //boton
-  rectMode(CENTER);
   fill(btncolor);
-  rect(320, 410, 150, 50);
+  rect(245, 385, 150, 50);
   textAlign(CENTER, CENTER);
   fill(0);
   textFont(subtitulo);
@@ -40,7 +39,7 @@ void pantalla1() {
 
   textFont(info);
   textAlign(CENTER, CENTER);
-  text(texto1, 320, 310, 400, 150);
+  text(texto1, 145, 240, 320, 150);
 }
 
 void pantalla2() {
@@ -79,6 +78,8 @@ void pantalla3 () {
   if ( contador >= 60*6) {
     contador = 0;
     estado = 4;
+    posXrect = 0;
+    posXi = 0;
   }
 
   fill(0);
@@ -107,8 +108,8 @@ void pantalla3 () {
       text("got the beat", 304, 145+20);
 
       textFont(info);
-      textAlign(CENTER, CENTER);
-      text(infowinter, 395, 300, 400, 150);
+      textAlign(LEFT, TOP);
+      text(infowinter, 189, 210, 431, 230);
     }
 
     fill(225);
@@ -144,6 +145,8 @@ void pantalla4 () {
   if ( contador >= 60*6) {
     contador = 0;
     estado = 5;
+    posXrect = 0;
+    posXi = 0;
   }
 
   fill(0);
@@ -172,8 +175,8 @@ void pantalla4 () {
       text("got the beat", 304, 145+20);
 
       textFont(info);
-      textAlign(CENTER, CENTER);
-      text(infokarina, 395, 300, 400, 150);
+      textAlign(LEFT, TOP);
+      text(infokarina, 189, 210, 431, 230);
     }
 
     fill(225);
@@ -209,6 +212,8 @@ void pantalla5 () {
   if ( contador >= 60*6) {
     contador = 0;
     estado = 6;
+    posXrect = 0;
+    posXi = 0;
   }
 
   fill(0);
@@ -236,8 +241,8 @@ void pantalla5 () {
       text("aespa", 304, 145);
 
       textFont(info);
-      textAlign(CENTER, CENTER);
-      text(infoning, 395, 300, 400, 150);
+      textAlign(LEFT, TOP);
+      text(infoning, 189, 210, 431, 230);
     }
 
     fill(225);
@@ -273,6 +278,9 @@ void pantalla6 () {
   if ( contador >= 60*6) {
     contador = 0;
     estado = 7;
+    posXrect = 0;
+    posXi = 0;
+    ;
   }
 
   fill(0);
@@ -300,8 +308,8 @@ void pantalla6 () {
       text("aespa", 304, 145);
 
       textFont(info);
-      textAlign(CENTER, CENTER);
-      text(infogiselle, 395, 300, 400, 150);
+      textAlign(LEFT, TOP);
+      text(infogiselle, 189, 210, 431, 230);
     }
 
     fill(225);
@@ -331,4 +339,114 @@ void pantalla6 () {
 }
 
 void pantalla7() {
+  //black mamba
+
+  contador++;
+  if ( contador > 60*6) {
+    contador = 0;
+    estado = 8;
+    posXrect = 0;
+    posXi = 0;
+  }
+
+  background(110, 43, 178);
+  image(blackm, 180, 44, tam, tam);
+
+  if (tam < 300) {
+    tam = tam + 3;
+  } else {
+    textAlign(CENTER, CENTER);
+    fill(225);
+    textFont(titulo);
+    text("Black Mamba", 350, 380);
+    textFont(info);
+    text("debut", 350, 380+40);
+  }
+
+  fill(142, 242, 147);
+  rect(posXtransicion, 0, 640, 480);
+
+  if ( contador > 180 ) {
+    if ( posXtransicion < 0 ) {
+      posXtransicion = posXtransicion + 11;
+    } else {
+      posXtransicion = 0;
+    }
+  }
+
+  fill(225);
+  textAlign(LEFT, TOP);
+  textFont(subtitulo);
+  text( contador, 5, 5 );
+}
+
+void pantalla8() {
+
+  contador++;
+  if ( contador > 60*6) {
+    contador = 0;
+    estado = 9;
+    posXrect = 0;
+    posXi = 0;
+  }
+
+  String infobm = "El 2 de noviembre, la agencia del grupo confirmó la fecha del debut para el 17 de noviembre a las 6PM KST con la canción Black Mamba. Además, se reveló un video teaser de las integrantes, el nuevo clip, titulado SYNK, æspa. La letra de la canción crea el mundo de aespa al introducir una historia en la que Black Mamba es el villano que amenaza al mundo y bloquea la conexión entre los miembros de aespa y sus avatares virtuales llamados æ.";
+  String photos = "Las fotos teaser se dividieron en dos conceptos: mundo real y kwangya el mundo donde habitan los avatares y el cual es amenazado";
+  background( 142, 242, 147 );
+  fill( 0 );
+  textFont( info);
+  text( infobm, 10, 20, 640, 460 );
+  text ( photos, 10, 141+20, 640, 460 );
+
+  
+  image( grupobm, posXrect, 224, 640, 480);
+  if (posXrect < 640) {
+    posXrect = posXrect + 4;
+  } else {
+    posXrect = 0;
+  }
+
+  fill(225);
+  textAlign(LEFT, TOP);
+  textFont(subtitulo);
+  text( contador, 5, 440 );
+}
+
+void pantalla9 () {
+  contador++;
+  if ( contador >= 60*6) {
+    contador = 0;
+    estado = 10;
+  }
+
+  background(110, 43, 178);
+
+  if ( posYk > 0 ) {
+    posYk = posYk - 3;
+  } else {
+    posYk = 0;
+  }
+  if ( posYg < 0 ) {
+    posYg = posYg + 3;
+  } else {
+    posYg = 0;
+  }
+
+  image(winterbm, 0, posYk, 155, height);
+  image(karinabm, 160, posYg, 155, height);
+  image(ningbm, 320, posYk, 155, height);
+  image(gisellebm, 480, posYg, 155, height);
+
+  textAlign(LEFT, TOP);
+  textFont(subtitulo);
+  text( contador, 5, 5 );
+  
+    //boton
+  fill(btncolor);
+  rect(245, 385, 150, 50);
+  textAlign(CENTER, CENTER);
+  fill(0);
+  textFont(subtitulo);
+  text("Reset", 320, 410);
+  
 }
