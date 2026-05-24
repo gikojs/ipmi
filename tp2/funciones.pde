@@ -388,6 +388,7 @@ void pantalla8() {
     estado = 9;
     posXrect = 0;
     posXi = 0;
+    btncolor = 222;
   }
 
   String infobm = "El 2 de noviembre, la agencia del grupo confirmó la fecha del debut para el 17 de noviembre a las 6PM KST con la canción Black Mamba. Además, se reveló un video teaser de las integrantes, el nuevo clip, titulado SYNK, æspa. La letra de la canción crea el mundo de aespa al introducir una historia en la que Black Mamba es el villano que amenaza al mundo y bloquea la conexión entre los miembros de aespa y sus avatares virtuales llamados æ.";
