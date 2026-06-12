@@ -1,5 +1,4 @@
 float cont = 12;
-float cant_corazones = 12;
 PImage obra;
 color rojo, blanco;
 
@@ -20,10 +19,10 @@ void draw() {
 
   cuadrados();
 
-  float mod=30;
-  for (int a=0; a<10; a++) {
-    for (int b=0; b<10; b++) {
-      corazones(a*mod, b*mod, mod, mod, 20, rojo, blanco);
+  float mod=20;
+  for (float a=19.8; a<40; a++) {
+    for (int b=0; b<20; b++) {
+      corazones(a*mod, b*mod, mod, mod, 10, rojo, blanco);
     }
   }
 }
