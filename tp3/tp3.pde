@@ -1,6 +1,17 @@
 float cont = 12;
+float cont_corazon = 30;
+
 PImage obra;
-color rojo, blanco;
+
+color rojo;
+color blanco;
+color morado;
+color rosa;
+
+color c_corazon1;
+color c_corazon2;
+color c_cuadrados1;
+color c_cuadrados2;
 
 /* Rosa claro (Fondo de octágonos): RGB(247, 190, 203)
  Morado / Púrpura (Cuadrados intercalados): RGB(158, 91, 166)
@@ -11,6 +22,8 @@ void setup() {
   size(800, 400);
   rojo = color(190, 11, 23);
   blanco = color(255);
+  morado = color(158, 91, 166);
+  rosa = color(247, 190, 203);
 }
 
 void draw() {
@@ -20,11 +33,7 @@ void draw() {
   cuadrados();
 
   float mod=20;
-  for (float a=19.8; a<40; a++) {
-    for (int b=0; b<20; b++) {
-      corazones(a*mod, b*mod, mod, mod, 10, rojo, blanco);
-    }
-  }
+  corazones(400, 0, mod, mod, 10);
 }
 
 void mousePressed () {
