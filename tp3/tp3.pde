@@ -1,3 +1,7 @@
+// alumno: Valentina Chavez, materia:ipmi, comision: 3, legajo: 125551/8
+
+//video adjunto https://youtu.be/1bwEi2Z-DlY
+
 float cont = 12;
 float cont_corazon = 13;
 
