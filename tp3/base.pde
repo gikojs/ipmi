@@ -28,40 +28,68 @@ void corazones (float x_, float y_, float ancho_, float alto_, float cant_) {
       posY = y_ + (j*t_cuadrado);
 
       translate(posX, posY);
-
       noStroke();
 
       int cont_colores = (k-j+11) % 13; //que no pase los 12 if
-
+      color color_click = rojo;
+      color color_base = rojo_base;
+      
       if (cont_colores == 0) {
-        c_corazon = rojo;
+        color_click = rojo;
+        color_base = rojo_base;
       } else if (cont_colores == 1) {
-        c_corazon = rojo;
+        color_click = rojo;
+        color_base = rojo_base;
       } else if (cont_colores == 2) {
-        c_corazon = blanco;
+        color_click = blanco;
+        color_base = blanco_base;
       } else if (cont_colores == 3) {
-        c_corazon = rojo;
+        color_click = rojo;
+        color_base = rojo_base;
       } else if (cont_colores == 4) {
-        c_corazon = blanco;
+        color_click = blanco;
+        color_base = blanco_base;
       } else if (cont_colores == 5) {
-        c_corazon = blanco;
+        color_click = blanco;
+        color_base = blanco_base;
       } else if (cont_colores == 6) {
-        c_corazon = rojo;
+        color_click = rojo;
+        color_base = rojo_base;
       } else if (cont_colores == 7) {
-        c_corazon = blanco;
+        color_click = blanco;
+        color_base = blanco_base;
       } else if (cont_colores == 8) {
-        c_corazon = rojo;
+        color_click = rojo;
+        color_base = rojo_base;
       } else if (cont_colores == 9) {
-        c_corazon = rojo;
+        color_click = rojo;
+        color_base = rojo_base;
       } else if (cont_colores == 10) {
-        c_corazon = blanco;
+        color_click = blanco;
+        color_base = blanco_base;
       } else if (cont_colores == 11) {
-        c_corazon = rojo;
+        color_click = rojo;
+        color_base = rojo_base;
       } else if (cont_colores == 12) {
-        c_corazon = blanco;
+        color_click = blanco;
+        color_base = blanco_base;
       }
 
+    //medir distancia para interactividad
+      float d = dist(posX, posY, mouseX, mouseY);
+
+      float radio= 100;
+
+      c_corazon = c_cambio(color_base, color_click, d, radio);
+      
       fill(c_corazon);
+
+      //funcion
+      if ((j+k-j+11) % 13 == 0) {
+        c_corazon = c_cambio (morado, rosa, d, radio);
+      } else {
+        c_corazon = c_cambio(rojo, rosa, d, radio);
+      }
 
       //queria que el movimiento sea tipo robotico
       if ( (mouseX >= 400) && (mouseX <= 800) && (mouseY >= 0) && (mouseY <= 400) ) {
@@ -83,7 +111,7 @@ void corazones (float x_, float y_, float ancho_, float alto_, float cant_) {
           rotate(PI-QUARTER_PI);
         }
       } else {
-        //cuando el mouse sale de la pantalla se reinicia      
+        //cuando el mouse sale de la pantalla se reinicia
       }
 
       for (int i=4; i<cant_; i++) {
